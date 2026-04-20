@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result | MediWise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Hi {{ name }} 👋</h2>
+    <p>Based on your symptoms, you may have:</p>
+    <h1>{{ disease }}</h1>
+    <p>This prediction is AI-based — please consult a doctor for confirmation.</p>
+    <a href="/">⬅ Go back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | MediWise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>👨‍⚕️ Admin Dashboard</h1>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Symptoms</th>
+            <th>Predicted Disease</th>
+        </tr>
+        {% for p in patients %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.age }}</td>
+            <td>{{ p.symptoms }}</td>
+            <td>{{ p.predicted_disease }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">⬅ Back to Home</a>
+</div>
+</body>
+</html>

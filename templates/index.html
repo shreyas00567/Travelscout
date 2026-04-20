@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediWise | AI Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🩺 MediWise - AI Symptom Checker</h1>
+    <form action="/predict" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br><br>
+
+        <p><strong>Select Symptoms:</strong></p>
+        <label><input type="checkbox" name="fever"> Fever</label><br>
+        <label><input type="checkbox" name="cough"> Cough</label><br>
+        <label><input type="checkbox" name="headache"> Headache</label><br>
+        <label><input type="checkbox" name="fatigue"> Fatigue</label><br><br>
+
+        <button type="submit">Predict Disease</button>
+    </form>
+    <br>
+    <a href="/admin">👨‍⚕️ Admin Dashboard</a>
+</div>
+</body>
+</html>
